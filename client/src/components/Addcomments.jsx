@@ -12,6 +12,7 @@ const Addcomments = (props) => {
     const [postdataid, setPostdataid] = useState(props.post);
     console.log(postdataid);
     const {account, setAccount} = useContext(LoginContext);
+    setAccount(localStorage.getItem("user"));
     // const [ Updatepostdata, SetUpdatepostdata ] = useState(props.Updatepost);
     const history = useHistory();
 

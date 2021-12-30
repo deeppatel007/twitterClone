@@ -16,6 +16,7 @@ const Home = () => {
     var [ postdata, setpostdata ] = useState([]);
 
     const {account, setAccount} = useContext(LoginContext);
+    setAccount(localStorage.getItem("user"));
 
     const [ clickdone, setClickdone ] = useState("false");
 

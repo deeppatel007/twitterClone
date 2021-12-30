@@ -13,6 +13,7 @@ const Myprofile=()=>{
     var [ Updatepostdata, setUpdatepostdata ] = useState([]);
 
     const {account, setAccount} = useContext(LoginContext);
+    setAccount(localStorage.getItem("user"));
     console.log(account);
     const [ clickdone, setClickdone ] = useState("false");
 

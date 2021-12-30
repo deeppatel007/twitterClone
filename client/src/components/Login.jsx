@@ -27,11 +27,13 @@ const Login = () => {
         let response = await authenticateLogin(login);
         if(!response) {
             alert("invalid login");
+            
             setLogin({ ...login, password: ''});
             return;  
         }
+        localStorage.setItem("user",(login.username));
         // alert("login successfully");
-        setAccount(login.username);
+        setAccount(localStorage.getItem("user"));
         setLogin(loginInitialValues);
         history.push('/Home');
     }

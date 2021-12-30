@@ -9,7 +9,7 @@ let count=140;
 const Post = () => {
 
     const {account, setAccount} = useContext(LoginContext);
-
+    setAccount(localStorage.getItem("user"));
     const PostInitialValues = {
         content: '',
         usernameQ: account

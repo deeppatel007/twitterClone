@@ -10,12 +10,14 @@ import {FaTwitter,CgProfile} from 'react-icons/all';
 const Header = () => {
 
     const { account,setAccount } = useContext(LoginContext);
-    
+    // setAccount(localStorage.getItem("user"));
     const history = useHistory();
 
     const clickHandler = () => {
+        localStorage.clear();
         history.push('/');
         setAccount('');
+        
     }
 
     return (

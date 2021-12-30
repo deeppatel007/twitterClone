@@ -8,6 +8,7 @@ import { LoginContext } from '../controller/loginstate';
 const Updatepost = (props) => {
 
     const {account, setAccount} = useContext(LoginContext);
+    setAccount(localStorage.getItem("user"));
     const [ Updatepostdata, SetUpdatepostdata ] = useState(props.Updatepost);
     console.log(Updatepostdata);
     const UpdatepostInitialValues = {

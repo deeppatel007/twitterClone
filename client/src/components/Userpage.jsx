@@ -15,7 +15,7 @@ const Userpage=() => {
     var [ userdata, setUserdata ] = useState([]);
 
     const {account, setAccount} = useContext(LoginContext);
-
+    setAccount(localStorage.getItem("user"));
     const [ clickdone, setClickdone ] = useState("false");
 
     const [ clickuserid, setClickuserid ] =  useState();
@@ -33,7 +33,7 @@ const Userpage=() => {
             console.log('Error while finding User',err);
         }
     }
-
+    setAccount(localStorage.getItem("user"));
     const followclickdone = async (e) => {
        setFollowclick({...followclick, username2: e.target.value})
        if(followclick.username2.length>0)
@@ -101,7 +101,7 @@ console.log("==>userdata", userdata);
                 </div>
             }
                 <div className="d-flex justify-content-center">
-                    <Button variant="outline-light" style={{color:'orange'}} size="lg" id="Addcomments" onClick={() => {setClickdone("false");userSaver(); setUserdata([])}}>
+                    <Button variant="outline-light" style={{color:'blue'}} size="lg" id="Addcomments" onClick={() => {setClickdone("false");userSaver(); setUserdata([])}}>
                         Home page
                     </Button>
                 </div>

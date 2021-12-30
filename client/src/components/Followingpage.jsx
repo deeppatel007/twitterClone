@@ -15,7 +15,7 @@ const Followingpage=() => {
     var [ userdata , setUserdata ] = useState([]);
 
     const {account, setAccount} = useContext(LoginContext);
-
+    setAccount(localStorage.getItem("user"));
     const [ clickdone, setClickdone ] = useState("false");
 
     const [ clickuserid, setClickuserid ] =  useState();
