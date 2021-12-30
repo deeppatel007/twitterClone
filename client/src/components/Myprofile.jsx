@@ -39,7 +39,7 @@ const Myprofile=()=>{
     return (
         <>
          <div> <Row> <h4 style={{marginLeft:'44rem'}}> MyTwits</h4> 
-         <Link to='/Followpage'>
+         {/* <Link to='/Followpage'>
                 <Button variant="primary" size="sm" style={{marginLeft:'20rem',marginTop:10}} >
                                                 Followers
                                             </Button>
@@ -48,7 +48,7 @@ const Myprofile=()=>{
                                             <Button variant="outline-primary" style={{color:'blue',marginLeft:'2rem',marginTop:10}} size="sm" >
                                                 Followings
                                             </Button>
-                                            </Link>
+                                            </Link> */}
                                             </Row>
             </div>
         <div>
@@ -75,9 +75,9 @@ const Myprofile=()=>{
                                             
                                         </Card.Text>
                                         <div className="d-flex justify-content-around">
-                                            <Button variant="outline-warning" size="sm" id="Seecomments" onClick={() => {setClickdone("Seecomments"); setClickUpdatepostid(Updatepost)}}>
+                                            {/* <Button variant="outline-warning" size="sm" id="Seecomments" onClick={() => {setClickdone("Seecomments"); setClickUpdatepostid(Updatepost)}}>
                                                 Comments
-                                            </Button>
+                                            </Button> */}
                                             
                                             <Button variant="outline-primary" style={{color:'blue'}} size="sm" id="Updatepost" onClick={() => {setClickdone("Updatepost"); setClickUpdatepostid(Updatepost)}}>
                                                 Edit Twit

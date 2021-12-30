@@ -65,6 +65,20 @@ const Header = () => {
                         
 
                     </Dropdown>
+                    <Link to='/Followpage'>
+                    <Nav.Item  className="mr-4">
+                <Button variant="outline-light" style={{marginLeft: 10}} >
+                                                Followers
+                                            </Button>
+                                            </Nav.Item>
+                                            </Link>
+                                            <Link to='/Followingpage'>
+                                            <Nav.Item  className="mr-4">
+                                            <Button variant="outline-light" style={{color:'#1DA1F2'}} >
+                                                Followings
+                                            </Button>
+                                            </Nav.Item>
+                                            </Link>
                 </Nav> 
             }
         </Navbar>
