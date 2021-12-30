@@ -18,7 +18,7 @@ app.use(cors());
 app.use('/api',router);
 
 
-const URL = `mongodb+srv://dev:dev@twitit.cyprt.mongodb.net/twitit?retryWrites=true&w=majority`;
+const URL = `mongodb+srv://deep:deep@twitterclone.zyeio.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 db(URL);
 
 app.listen(5000,() => {

@@ -64,20 +64,6 @@ const Home = () => {
                                             
                                             
                                         </Card.Text>
-                                        <div className="d-flex justify-content-around" style={{marginTop:70}}>
-                                        <Link to='/Seecomments'>
-                                            <Button variant="primary" size="sm" id="Seecomments" onClick={() => {setClickdone("Seecomments"); setClickpostid(post)}}>
-                                                <FaRegComment></FaRegComment>
-                                            </Button>
-                                            </Link>
-                                            <Link to='/Addcomments'>
-                                            <Button variant="secondary"size="sm" id="Addcomments" onClick={() => {setClickdone("Addcomments"); setClickpostid(post)}}>
-                                                Add comments
-                                            </Button>
-                                            </Link>
-                                        
-                                           
-                                        </div>
                                     </Card.Body>
                                 </Card>
                             </Col>
@@ -98,7 +84,7 @@ const Home = () => {
                 {
                     (clickdone === "Addcomments")?
                     <div>
-                        <Addcomments post={clickpostid.usernameQ} />
+                        <Addcomments post={clickpostid._id} />
                     </div>
                     :
                     <div>

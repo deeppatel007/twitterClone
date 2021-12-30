@@ -12,7 +12,7 @@ const Seecomments = (props) => {
     
     const [ postdata, setpostdata ] = useState(props.post);
     var [ commentdata, setcommentdata ] = useState([]);
-
+    console.log(postdata);
 
     const commentfinder = async (postdata) => {
         try {
