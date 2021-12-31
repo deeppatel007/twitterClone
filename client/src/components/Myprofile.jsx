@@ -113,11 +113,11 @@ const Myprofile=()=>{
                 }
                 </div>
             }
-                <div className="d-flex justify-content-center">
+                {/* <div className="d-flex justify-content-center">
                     <Button variant="outline-light" style={{color:'orange'}} size="lg" id="Addcomments" onClick={() => {setClickdone("false"); UpdatepostSaver(); setUpdatepostdata([])}}>
                        Home page
                     </Button>
-                </div>
+                </div> */}
             </div>
         }
         </div>
