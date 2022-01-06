@@ -15,8 +15,9 @@ const Seecomments = (props) => {
     console.log(postdata);
 
     const commentfinder = async (postdata) => {
+        console.log(postdata);
         try {
-            await axios.get(`${url}/comment/search`,{'params':{usernameQ: postdata._id}})
+            await axios.get(`${url}/comment/search`,{'params':{usernameQ: postdata}})
             .then ((res) => {
                 setcommentdata([...commentdata, res.data]);
                 console.log(commentdata);

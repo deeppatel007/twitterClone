@@ -6,14 +6,12 @@ import { add_comment } from '../services/service';
 import { LoginContext } from '../controller/loginstate';
 
 const Addcomments = (props) => {
-    // const Q = props.postdataid;
-    // console.log(Q);
-    // console.log(props.post);
+    
+  
     const [postdataid, setPostdataid] = useState(props.post);
     console.log(postdataid);
     const {account, setAccount} = useContext(LoginContext);
     setAccount(localStorage.getItem("user"));
-    // const [ Updatepostdata, SetUpdatepostdata ] = useState(props.Updatepost);
     const history = useHistory();
 
     if(account === '') 

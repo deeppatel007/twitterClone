@@ -33,7 +33,13 @@ const Home = () => {
             console.log('Error while finding User',err);
         }
     }
+   const clickhandler = (e) =>{
+    setClickdone(e.target.name);
+    setClickpostid(e.target.value);
 
+    console.log(e.target.name);
+
+    }
 
     useEffect(() => {
         postSaver();
@@ -65,7 +71,10 @@ const Home = () => {
                                             
                                             
                                         </Card.Text>
+                                    <button name="Addcomments" onClick={(e) => clickhandler(e)} value={post._id}>Addcomments</button>
+                                    <button name="Seecomments" onClick={(e) => clickhandler(e)} value={post._id}>Seecomments</button>
                                     </Card.Body>
+                                    
                                 </Card>
                             </Col>
                         ))
@@ -85,7 +94,7 @@ const Home = () => {
                 {
                     (clickdone === "Addcomments")?
                     <div>
-                        <Addcomments post={clickpostid._id} />
+                        <Addcomments post={clickpostid} />
                     </div>
                     :
                     <div>
